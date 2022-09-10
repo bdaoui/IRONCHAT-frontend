@@ -8,9 +8,9 @@ function Home() {
         <Row>
             <Col md={6} className="d-flex flex-direction-column align-items-center justify-content-center">
                 <div>
-                    <h1>Share whats on your mind with your friends</h1>
-                    <p>Iron Chat keeps you connected</p>
-                    <LinkContainer to="/chat">
+                    <h1>Ever needed an area to share what on your mind?</h1>
+                    <p>SHAREA keeps you connected</p>
+                    <LinkContainer to="/view">
                         <Button variant="success">
                             Lets Go!!! <i className="fas fa-comments home-message-icon"></i>
                         </Button>

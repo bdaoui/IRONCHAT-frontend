@@ -4,6 +4,8 @@ import { useLogoutUserMutation } from "../services/appApi";
 import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import logo from "../assets/logo.png";
+import "./Navigation.css";
+
 function Navigation() {
     const user = useSelector((state) => state.user);
     const [logoutUser] = useLogoutUserMutation();
@@ -14,7 +16,7 @@ function Navigation() {
         window.location.replace("/");
     }
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" expand="lg">
             <Container>
                 <LinkContainer to="/">
                     <Navbar.Brand>
@@ -31,6 +33,9 @@ function Navigation() {
                         )}
                         <LinkContainer to="/chat">
                             <Nav.Link>Chat</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/feed">
+                            <Nav.Link>Feed</Nav.Link>
                         </LinkContainer>
                         {user && (
                             <NavDropdown

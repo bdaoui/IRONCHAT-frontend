@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Chat from "./pages/Chat";
+import Feed from "./pages/Feed";
+import View from "./pages/View";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import { AppContext, socket } from "./context/appContext";
@@ -30,7 +32,9 @@ function App() {
                             <Route path="/signup" element={<Signup />} />
                         </>
                     )}
+                    <Route path="/view" element={<View />} />
                     <Route path="/chat" element={<Chat />} />
+                    <Route path="/feed" element={<Feed />} />
                 </Routes>
             </BrowserRouter>
         </AppContext.Provider>
